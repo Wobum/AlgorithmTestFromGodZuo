@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * @Author: Wobum
  * @Date: 2018/12/9 15:09
- * @Description:
+ * @Description: 冒泡排序
  **/
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
