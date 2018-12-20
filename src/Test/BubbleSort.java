@@ -1,5 +1,8 @@
 package Test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -112,6 +115,11 @@ public class BubbleSort {
         bubbleSort2(arr5);
         endTime = System.currentTimeMillis();
         System.out.println("优化 2 后冒泡排序耗时：" + (endTime - startTime) + " ms");
+
+        Date date = new Date();
+        System.out.println(date);
+        DateFormat df = new SimpleDateFormat("yyyy MM dd HH:mm:ss");
+        System.out.println(df.format(date));
     }
 
 

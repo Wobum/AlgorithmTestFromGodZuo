@@ -12,7 +12,7 @@ public class PrintMatrixSpiralOrder {
         int sR = 0; // 开始位置的右下标
         int eL = matrix.length - 1; // 结束位置的左下标
         int eR = matrix[0].length - 1; // 结束位置的右下标
-        while (sL <= eL && sR <= eR){
+        while (sL <= eL && sR <= eR) {
             printEdge(matrix, sL++, sR++, eL--, eR--);
         }
     }
@@ -41,7 +41,7 @@ public class PrintMatrixSpiralOrder {
                 System.out.println(matrix[r2][curC] + " ");
                 curC--;
             }// 此时 curC = c1; curR = r2;
-            while (curR != r1){
+            while (curR != r1) {
                 System.out.println(matrix[curR][c1] + " ");
                 curR--;
             }
@@ -49,8 +49,8 @@ public class PrintMatrixSpiralOrder {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 },
-                { 13, 14, 15, 16 } };
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12},
+                {13, 14, 15, 16}};
         spiralOrderPrint(matrix);
     }
 }

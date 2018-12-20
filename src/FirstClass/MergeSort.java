@@ -1,6 +1,5 @@
 package FirstClass;
 
-import javax.swing.plaf.metal.DefaultMetalTheme;
 import java.util.Arrays;
 
 public class MergeSort {
@@ -18,7 +17,7 @@ public class MergeSort {
     }
 
     public static void process(int[] arr, int l, int r){
-        if (l == r){
+        if (l >= r){
             return;
         }
         int mid = l + (r - l)/2;

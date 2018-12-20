@@ -8,60 +8,60 @@ public class InsertionSort {
      * @Date: 2018/11/7 10:38
      * @Description: 插入排序
      */
-    public static void insertionSort(int[] arr){
-        if (arr == null || arr.length < 2){
+    public static void insertionSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
             return;
         }
-        for (int i = 1; i < arr.length; i++){
-            for (int j = i; (j > 0) && (arr[j] < arr[j-1]); j--){
-                swap(arr, j, j-1);
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; (j > 0) && (arr[j] < arr[j - 1]); j--) {
+                swap(arr, j, j - 1);
             }
         }
     }
 
     //数组内交换
-    public static void swap(int[] arr, int i, int j){
+    public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
     // 打印数组
-    public static void printArr(int[] arr){
+    public static void printArr(int[] arr) {
         if (arr == null) {
             return;
         }
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
     //生成一个随机整数数组
-    public static int[] generatieRandomArr(int maxSize, int maxValue){
-        if (maxSize < 1){
+    public static int[] generatieRandomArr(int maxSize, int maxValue) {
+        if (maxSize < 1) {
             return null;
         }
-        int [] arr = new int[maxSize - 1];
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = (int)(maxValue * Math.random());
+        int[] arr = new int[maxSize - 1];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (maxValue * Math.random());
         }
         return arr;
     }
 
 
     // 判断两个数组是否相等
-    public static boolean isEqual(int[] arr1, int[] arr2){
-        if((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)){
+    public static boolean isEqual(int[] arr1, int[] arr2) {
+        if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
             return false;
         }
-        if ((arr1 == null) && (arr2 == null)){
-            return  true;
+        if ((arr1 == null) && (arr2 == null)) {
+            return true;
         }
-        if (arr1.length != arr2.length){
-            return  false;
+        if (arr1.length != arr2.length) {
+            return false;
         }
-        for (int i = 0; i < arr1.length; i++){
+        for (int i = 0; i < arr1.length; i++) {
             if (arr1[i] != arr2[i]) {
                 return false;
             }
@@ -70,12 +70,12 @@ public class InsertionSort {
     }
 
     //复制一个数组
-    public static int[] copyArr(int[] arr){
-        if (arr == null){
-            return  null;
+    public static int[] copyArr(int[] arr) {
+        if (arr == null) {
+            return null;
         }
         int[] arr1 = new int[arr.length];
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             arr1[i] = arr[i];
         }
         return arr1;
@@ -85,13 +85,13 @@ public class InsertionSort {
     public static void main(String[] args) {
         int testTime = 5000;
         boolean succeed = true;
-        for (int i = 0; i < testTime; i++){
-            int[] arr1 = generatieRandomArr(100,500);
+        for (int i = 0; i < testTime; i++) {
+            int[] arr1 = generatieRandomArr(100, 500);
             int[] arr2 = copyArr(arr1);
             insertionSort(arr1);
             Arrays.sort(arr2);
-            if (!isEqual(arr1,arr2)){
-                succeed =false;
+            if (!isEqual(arr1, arr2)) {
+                succeed = false;
                 break;
             }
         }
