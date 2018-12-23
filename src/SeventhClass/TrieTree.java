@@ -8,15 +8,15 @@ package SeventhClass;
  **/
 public class TrieTree {
     public static class TrieNode {
-        public int pass;
-        public int end;
-        public TrieNode[] nexts;
+            public int pass;
+            public int end;
+            public TrieNode[] nexts;
 
-        public TrieNode() {
-            this.pass = 0;
-            this.end = 0;
-            this.nexts = new TrieNode[26];
-        }
+            public TrieNode() {
+                this.pass = 0;
+                this.end = 0;
+                this.nexts = new TrieNode[26];
+            }
     }
 
     public static class Trie {
