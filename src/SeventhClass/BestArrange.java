@@ -31,6 +31,7 @@ public class BestArrange {
         }
     }
 
+    // 贪心策略，结束时间最早的先开始
     public static int getMostTime(meeting[] arr, int start) {
         Arrays.sort(arr, new ProgramComparator()); //按照结束时间早进行排序
         int result = 0;
